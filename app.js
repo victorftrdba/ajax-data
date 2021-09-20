@@ -1,5 +1,4 @@
 function displayData() {
-    setInterval(function () {
         $('#posts').html('')
         $.ajax({
             type: 'GET',
@@ -19,7 +18,6 @@ function displayData() {
                 })
             }
         })
-    }, 5000)
 }
 
-displayData()
+setInterval('displayData()', 5000)
